@@ -1,21 +1,20 @@
 package maps
 
-
 type Dictionary map[string]string
 
 const (
 	ErrNotfound = DictionaryeErr("not found")
-	ErrExist = DictionaryeErr("exists")
+	ErrExist    = DictionaryeErr("exists")
 )
 
-type DictionaryeErr string 
+type DictionaryeErr string
 
 func (e DictionaryeErr) Error() string {
 	return string(e)
 }
 
 func (d Dictionary) Search(s string) (string, error) {
-	res,ok := d[s]
+	res, ok := d[s]
 	if !ok {
 		return res, ErrNotfound
 	}
@@ -44,7 +43,7 @@ func (d Dictionary) Update(key, val string) (res error) {
 	if res == nil {
 		d[key] = val
 	}
-	
+
 	return
 }
 

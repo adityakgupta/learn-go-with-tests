@@ -10,7 +10,7 @@ import (
 const sleep = "sleep"
 const write = "write"
 
-func TestCountdown(t *testing.T)  {
+func TestCountdown(t *testing.T) {
 	t.Run("prints countdown", func(t *testing.T) {
 		buff := &bytes.Buffer{}
 
@@ -21,7 +21,7 @@ func TestCountdown(t *testing.T)  {
 2
 1
 Go!`
-	
+
 		if got != want {
 			t.Errorf("got %s, want %s", got, want)
 		}
@@ -29,13 +29,13 @@ Go!`
 
 	t.Run("sleep before print", func(t *testing.T) {
 		spysleep := &SpyCountdown{}
-		
+
 		Countdown(spysleep, spysleep)
 
 		want := []string{write, sleep, write, sleep, write, sleep, write}
 
 		if !reflect.DeepEqual(want, spysleep.Calls) {
-			t.Errorf("want %s, got %s", want, spysleep.Calls)
+			t.Errorf("got %s, want %s", spysleep.Calls, want)
 		}
 	})
 }
@@ -69,6 +69,6 @@ type SpyTime struct {
 	durationSlept time.Duration
 }
 
-func (s *SpyTime) Sleep(duration time.Duration)  {
+func (s *SpyTime) Sleep(duration time.Duration) {
 	s.durationSlept = duration
 }

@@ -1,2 +1,3 @@
 ### Pointers
--   Struct Pointers are automatically dereferenced
+
+- Struct Pointers are automatically dereferenced

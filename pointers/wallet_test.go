@@ -3,19 +3,19 @@ package pointers
 import "testing"
 
 func TestWallet(t *testing.T) {
-	
-	assertBalance := func (t testing.TB, w Wallet, want Bitcoin)  {
+
+	assertBalance := func(t testing.TB, w Wallet, want Bitcoin) {
 		t.Helper()
 		got := w.Balance()
 
 		if got != want {
 			t.Errorf("got %s, want %s", got, want)
-		}		
+		}
 	}
 
-	assertError := func (t testing.TB, got, want error)  {
+	assertError := func(t testing.TB, got, want error) {
 		t.Helper()
-		
+
 		if got == nil {
 			t.Fatal("wanted error but got nil")
 		}

@@ -4,7 +4,7 @@ import "math"
 
 type Rectangle struct {
 	Height float64
-	Width float64
+	Width  float64
 }
 
 type Circle struct {
@@ -12,7 +12,7 @@ type Circle struct {
 }
 
 type Triangle struct {
-	Base float64
+	Base   float64
 	Height float64
 }
 

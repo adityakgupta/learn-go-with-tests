@@ -4,7 +4,7 @@ import (
 	"testing"
 )
 
-func assertString(t testing.TB, got, want string)  {
+func assertString(t testing.TB, got, want string) {
 	t.Helper()
 
 	if got != want {
@@ -12,7 +12,7 @@ func assertString(t testing.TB, got, want string)  {
 	}
 }
 
-func assertError(t testing.TB, got, want error)  {
+func assertError(t testing.TB, got, want error) {
 	t.Helper()
 
 	if got != want {
@@ -20,7 +20,7 @@ func assertError(t testing.TB, got, want error)  {
 	}
 }
 
-func assertDefinition(t testing.TB, d Dictionary, key, val string)  {
+func assertDefinition(t testing.TB, d Dictionary, key, val string) {
 	t.Helper()
 
 	got, err := d.Search(key)
@@ -31,16 +31,16 @@ func assertDefinition(t testing.TB, d Dictionary, key, val string)  {
 	assertString(t, got, val)
 }
 
-func TestSearch(t *testing.T)  {
+func TestSearch(t *testing.T) {
 	dict := Dictionary{"test": "this is test"}
 
 	t.Run("known", func(t *testing.T) {
 		got, _ := dict.Search("test")
 		want := "this is test"
-		
+
 		assertString(t, got, want)
 	})
-	
+
 	t.Run("unknown", func(t *testing.T) {
 		_, err := dict.Search("nothing")
 
@@ -49,8 +49,8 @@ func TestSearch(t *testing.T)  {
 
 }
 
-func TestAdd(t *testing.T)  {
-	t.Run("new", func(t *testing.T){
+func TestAdd(t *testing.T) {
+	t.Run("new", func(t *testing.T) {
 		dict := Dictionary{}
 		key := "test"
 		val := "this is test"
@@ -59,7 +59,7 @@ func TestAdd(t *testing.T)  {
 
 		assertError(t, err, nil)
 		assertDefinition(t, dict, key, val)
-	})	
+	})
 
 	t.Run("old", func(t *testing.T) {
 		key := "test"
@@ -72,7 +72,7 @@ func TestAdd(t *testing.T)  {
 	})
 }
 
-func TestUpdate(t *testing.T)  {
+func TestUpdate(t *testing.T) {
 	t.Run("present", func(t *testing.T) {
 		key := "test"
 		val := "this is test"
@@ -95,7 +95,7 @@ func TestUpdate(t *testing.T)  {
 	})
 }
 
-func TestDelete(t *testing.T)  {
+func TestDelete(t *testing.T) {
 	t.Run("present", func(t *testing.T) {
 		key := "test"
 		val := "this is test"

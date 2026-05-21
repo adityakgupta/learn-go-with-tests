@@ -20,16 +20,16 @@ Write better documentation to understand its usage quickly
 
 _Yes and No_
 
--   Class &rarr; Absent
-    -   Struct can be a functional equivalent
--   Function Overloading &rarr; Compilation Error `Function redeclared in block`
-    -   declare functions in different packages
-    -   define methods
+- Class &rarr; Absent
+  - Struct can be a functional equivalent
+- Function Overloading &rarr; Compilation Error `Function redeclared in block`
+  - declare functions in different packages
+  - define methods
 
 ## Contents
 
--   [Interface](./structs/README.md/#interface)
--   [Table Driven Tests](./structs/README.md/#table-driven-tests)
--   [Pointers](./pointers/README.md/#pointers)
--   [Dependency Injection](./di/README.md/#dependency-injection)
--   [Mocking](./mocking/README.md/#mocking)
+- [Interface](./structs/README.md/#interface)
+- [Table Driven Tests](./structs/README.md/#table-driven-tests)
+- [Pointers](./pointers/README.md/#pointers)
+- [Dependency Injection](./di/README.md/#dependency-injection)
+- [Mocking](./mocking/README.md/#mocking)
