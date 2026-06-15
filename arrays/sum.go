@@ -1,4 +1,4 @@
-package main
+package sum
 
 func Sum(a []int) (r int) {
 	for _, num := range a {

@@ -1,4 +1,4 @@
-<p align="center"> <em> The test speaks to us more clearly, as if it were an assertion of truth, <b>not a sequence of operations</b></em> </p>
+<p align="center"><em>The test speaks to us more clearly, as if it were an assertion of truth, <b>not a sequence of operations</b></em></p>
 
 ## Philosophy
 
@@ -28,8 +28,10 @@ _Yes and No_
 
 ## Contents
 
-- [Interface](./structs/README.md/#interface)
-- [Table Driven Tests](./structs/README.md/#table-driven-tests)
-- [Pointers](./pointers/README.md/#pointers)
-- [Dependency Injection](./di/README.md/#dependency-injection)
-- [Mocking](./mocking/README.md/#mocking)
+- [Interface](./structs/README.md)
+- [Table Driven Tests](./structs/README.md)
+- [Pointers](./pointers/README.md)
+- [Dependency Injection](./di/README.md)
+- [Mocking](./mocking/README.md)
+- [Concurrecy](./concurrency/README.md)
+- [Select](./select/README.md)

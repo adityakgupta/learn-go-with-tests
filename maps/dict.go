@@ -3,13 +3,13 @@ package maps
 type Dictionary map[string]string
 
 const (
-	ErrNotfound = DictionaryeErr("not found")
-	ErrExist    = DictionaryeErr("exists")
+	ErrNotfound = DictionaryErr("not found")
+	ErrExist    = DictionaryErr("exists")
 )
 
-type DictionaryeErr string
+type DictionaryErr string
 
-func (e DictionaryeErr) Error() string {
+func (e DictionaryErr) Error() string {
 	return string(e)
 }
 
